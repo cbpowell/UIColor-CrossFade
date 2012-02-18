@@ -23,18 +23,25 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-//  CPAppDelegate.h
-//  UIColorCrossFadeDemo
-
+//
+//  UIColor+CrossFade.h
+//
 
 #import <UIKit/UIKit.h>
 
-@class CPViewController;
+@interface UIColor (CrossFade)
 
-@interface CPAppDelegate : UIResponder <UIApplicationDelegate>
+/**
+ * Fades between firstColor and secondColor at the specified ratio:
+ * 
+ *    @ ratio 0.0 - fully firstColor
+ *    @ ratio 0.5 - halfway between firstColor and secondColor
+ *    @ ratio 1.0 - fully secondColor
+ *
+ */
 
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) CPViewController *viewController;
++ (UIColor *)colorForFadeBetweenFirstColor:(UIColor *)firstColor 
+                               secondColor:(UIColor *)secondColor 
+                                   atRatio:(CGFloat)ratio;
 
 @end

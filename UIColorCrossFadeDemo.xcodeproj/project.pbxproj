@@ -15,6 +15,7 @@
 		EA38B37E14F02D6000546B51 /* CPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B37D14F02D6000546B51 /* CPAppDelegate.m */; };
 		EA38B38114F02D6000546B51 /* CPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B38014F02D6000546B51 /* CPViewController.m */; };
 		EA38B38414F02D6000546B51 /* CPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA38B38214F02D6000546B51 /* CPViewController.xib */; };
+		EA38B38F14F05A7300546B51 /* UIColor+CrossFade.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B38E14F05A7300546B51 /* UIColor+CrossFade.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,17 @@
 		EA38B36D14F02D5F00546B51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA38B36F14F02D5F00546B51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA38B37114F02D5F00546B51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		EA38B37514F02D5F00546B51 /* UIColorCrossFadeDemo-Info.plist */ = {isa = PBXFileReference; path = "UIColorCrossFadeDemo-Info.plist"; sourceTree = "<group>"; };
+		EA38B37514F02D5F00546B51 /* UIColorCrossFadeDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIColorCrossFadeDemo-Info.plist"; sourceTree = "<group>"; };
 		EA38B37714F02D5F00546B51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA38B37914F02D5F00546B51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EA38B37B14F02D5F00546B51 /* UIColorCrossFadeDemo-Prefix.pch */ = {isa = PBXFileReference; path = "UIColorCrossFadeDemo-Prefix.pch"; sourceTree = "<group>"; };
-		EA38B37C14F02D5F00546B51 /* CPAppDelegate.h */ = {isa = PBXFileReference; path = CPAppDelegate.h; sourceTree = "<group>"; };
+		EA38B37B14F02D5F00546B51 /* UIColorCrossFadeDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColorCrossFadeDemo-Prefix.pch"; sourceTree = "<group>"; };
+		EA38B37C14F02D5F00546B51 /* CPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAppDelegate.h; sourceTree = "<group>"; };
 		EA38B37D14F02D6000546B51 /* CPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAppDelegate.m; sourceTree = "<group>"; };
-		EA38B37F14F02D6000546B51 /* CPViewController.h */ = {isa = PBXFileReference; path = CPViewController.h; sourceTree = "<group>"; };
+		EA38B37F14F02D6000546B51 /* CPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPViewController.h; sourceTree = "<group>"; };
 		EA38B38014F02D6000546B51 /* CPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPViewController.m; sourceTree = "<group>"; };
 		EA38B38314F02D6000546B51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CPViewController.xib; sourceTree = "<group>"; };
+		EA38B38D14F05A7300546B51 /* UIColor+CrossFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CrossFade.h"; sourceTree = "<group>"; };
+		EA38B38E14F05A7300546B51 /* UIColor+CrossFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CrossFade.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +53,8 @@
 		EA38B35E14F02D5F00546B51 = {
 			isa = PBXGroup;
 			children = (
+				EA38B38D14F05A7300546B51 /* UIColor+CrossFade.h */,
+				EA38B38E14F05A7300546B51 /* UIColor+CrossFade.m */,
 				EA38B37314F02D5F00546B51 /* UIColorCrossFadeDemo */,
 				EA38B36C14F02D5F00546B51 /* Frameworks */,
 				EA38B36A14F02D5F00546B51 /* Products */,
@@ -164,6 +169,7 @@
 				EA38B37A14F02D5F00546B51 /* main.m in Sources */,
 				EA38B37E14F02D6000546B51 /* CPAppDelegate.m in Sources */,
 				EA38B38114F02D6000546B51 /* CPViewController.m in Sources */,
+				EA38B38F14F05A7300546B51 /* UIColor+CrossFade.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

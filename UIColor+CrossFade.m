@@ -23,49 +23,34 @@
  * OTHER DEALINGS IN THE SOFTWARE.
  */
 
-//  CPViewController.m
-//  UIColorCrossFadeDemo
-
-#import "CPViewController.h"
+//
+//  UIColor+CrossFade.m
+//
 
 #import "UIColor+CrossFade.h"
 
-@interface CPViewController ()
+@implementation UIColor (CrossFade)
 
-@end
-
-@implementation CPViewController
-
-@synthesize slider, label;
-@synthesize colorA, colorB;
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.label.text = [NSString stringWithFormat:@"%f", self.slider.value];
-    self.colorA = [UIColor redColor];
-    self.colorB = [UIColor blueColor];
++ (UIColor *)colorForFadeBetweenFirstColor:(UIColor *)firstColor 
+                               secondColor:(UIColor *)secondColor 
+                                   atRatio:(CGFloat)ratio {
     
-    self.view.backgroundColor = [UIColor redColor];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-
-- (IBAction)sliderValueChanged:(id)sender {
-    self.label.text = [NSString stringWithFormat:@"%f", self.slider.value];
     
-    UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:self.colorA secondColor:self.colorB atRatio:self.slider.value];
-    self.view.backgroundColor = crossFade;
+    const CGFloat *firstColorComponents = CGColorGetComponents(firstColor.CGColor);
+    const CGFloat *secondColorComponents = CGColorGetComponents(secondColor.CGColor);
+    CGFloat firstColorAlpha = CGColorGetAlpha(firstColor.CGColor);
+    CGFloat secondColorAlpha = CGColorGetAlpha(secondColor.CGColor);
+    
+    // Red: components[0]
+    // Green: components[1]
+    // Blue: components[2]
+    
+    CGFloat newRed = firstColorComponents[0] * (1 - ratio) + secondColorComponents[0] * ratio;
+    CGFloat newGreen = firstColorComponents[1] * (1 - ratio) + secondColorComponents[1] * ratio;
+    CGFloat newBlue = firstColorComponents[2] * (1 - ratio) + secondColorComponents[2] * ratio;
+    CGFloat newAlpha = firstColorAlpha * (1 - ratio) + secondColorAlpha * ratio;
+    
+    UIColor *newColor = [UIColor colorWithRed:newRed green:newGreen blue:newBlue alpha:newAlpha];
+    return newColor;
 }
-
 @end
