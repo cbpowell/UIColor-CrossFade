@@ -1,0 +1,17 @@
+UIColor+CrossFade
+=================
+
+UIColor+CrossFade is a UIColor category adding a class method to return a UIColor created by cross fading between the two specified UIColor objects at the specified ratio (between 0.0 and 1.0).
+
+### Using UIColor+CrossFade:
+
+Import UIColor+CrossFade.h, and use as follows:
+
+    UIColor *colorA = [UIColor redColor];
+    UIColor *colorB = [UIColor blueColor];
+    UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:colorA secondColor:colorB atRatio:0.5f]; // crossFade is purple
+
+At a ratio of 0.0f, the result will be fully firstColor
+At a ratio of 1.0f, the result will be fully secondColor
+
+See the included UIColorCrossFadeDemo project for further example usage.
