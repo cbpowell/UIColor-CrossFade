@@ -1,0 +1,282 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA38B36E14F02D5F00546B51 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA38B36D14F02D5F00546B51 /* UIKit.framework */; };
+		EA38B37014F02D5F00546B51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA38B36F14F02D5F00546B51 /* Foundation.framework */; };
+		EA38B37214F02D5F00546B51 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA38B37114F02D5F00546B51 /* CoreGraphics.framework */; };
+		EA38B37814F02D5F00546B51 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA38B37614F02D5F00546B51 /* InfoPlist.strings */; };
+		EA38B37A14F02D5F00546B51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B37914F02D5F00546B51 /* main.m */; };
+		EA38B37E14F02D6000546B51 /* CPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B37D14F02D6000546B51 /* CPAppDelegate.m */; };
+		EA38B38114F02D6000546B51 /* CPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B38014F02D6000546B51 /* CPViewController.m */; };
+		EA38B38414F02D6000546B51 /* CPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA38B38214F02D6000546B51 /* CPViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA38B36914F02D5F00546B51 /* UIColorCrossFadeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIColorCrossFadeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA38B36D14F02D5F00546B51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA38B36F14F02D5F00546B51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA38B37114F02D5F00546B51 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EA38B37514F02D5F00546B51 /* UIColorCrossFadeDemo-Info.plist */ = {isa = PBXFileReference; path = "UIColorCrossFadeDemo-Info.plist"; sourceTree = "<group>"; };
+		EA38B37714F02D5F00546B51 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA38B37914F02D5F00546B51 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA38B37B14F02D5F00546B51 /* UIColorCrossFadeDemo-Prefix.pch */ = {isa = PBXFileReference; path = "UIColorCrossFadeDemo-Prefix.pch"; sourceTree = "<group>"; };
+		EA38B37C14F02D5F00546B51 /* CPAppDelegate.h */ = {isa = PBXFileReference; path = CPAppDelegate.h; sourceTree = "<group>"; };
+		EA38B37D14F02D6000546B51 /* CPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAppDelegate.m; sourceTree = "<group>"; };
+		EA38B37F14F02D6000546B51 /* CPViewController.h */ = {isa = PBXFileReference; path = CPViewController.h; sourceTree = "<group>"; };
+		EA38B38014F02D6000546B51 /* CPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPViewController.m; sourceTree = "<group>"; };
+		EA38B38314F02D6000546B51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CPViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA38B36614F02D5F00546B51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA38B36E14F02D5F00546B51 /* UIKit.framework in Frameworks */,
+				EA38B37014F02D5F00546B51 /* Foundation.framework in Frameworks */,
+				EA38B37214F02D5F00546B51 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA38B35E14F02D5F00546B51 = {
+			isa = PBXGroup;
+			children = (
+				EA38B37314F02D5F00546B51 /* UIColorCrossFadeDemo */,
+				EA38B36C14F02D5F00546B51 /* Frameworks */,
+				EA38B36A14F02D5F00546B51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA38B36A14F02D5F00546B51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA38B36914F02D5F00546B51 /* UIColorCrossFadeDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA38B36C14F02D5F00546B51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA38B36D14F02D5F00546B51 /* UIKit.framework */,
+				EA38B36F14F02D5F00546B51 /* Foundation.framework */,
+				EA38B37114F02D5F00546B51 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA38B37314F02D5F00546B51 /* UIColorCrossFadeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				EA38B37C14F02D5F00546B51 /* CPAppDelegate.h */,
+				EA38B37D14F02D6000546B51 /* CPAppDelegate.m */,
+				EA38B37F14F02D6000546B51 /* CPViewController.h */,
+				EA38B38014F02D6000546B51 /* CPViewController.m */,
+				EA38B38214F02D6000546B51 /* CPViewController.xib */,
+				EA38B37414F02D5F00546B51 /* Supporting Files */,
+			);
+			path = UIColorCrossFadeDemo;
+			sourceTree = "<group>";
+		};
+		EA38B37414F02D5F00546B51 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA38B37514F02D5F00546B51 /* UIColorCrossFadeDemo-Info.plist */,
+				EA38B37614F02D5F00546B51 /* InfoPlist.strings */,
+				EA38B37914F02D5F00546B51 /* main.m */,
+				EA38B37B14F02D5F00546B51 /* UIColorCrossFadeDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA38B36814F02D5F00546B51 /* UIColorCrossFadeDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA38B38714F02D6000546B51 /* Build configuration list for PBXNativeTarget "UIColorCrossFadeDemo" */;
+			buildPhases = (
+				EA38B36514F02D5F00546B51 /* Sources */,
+				EA38B36614F02D5F00546B51 /* Frameworks */,
+				EA38B36714F02D5F00546B51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIColorCrossFadeDemo;
+			productName = UIColorCrossFadeDemo;
+			productReference = EA38B36914F02D5F00546B51 /* UIColorCrossFadeDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA38B36014F02D5F00546B51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = CP;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = EA38B36314F02D5F00546B51 /* Build configuration list for PBXProject "UIColorCrossFadeDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA38B35E14F02D5F00546B51;
+			productRefGroup = EA38B36A14F02D5F00546B51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA38B36814F02D5F00546B51 /* UIColorCrossFadeDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA38B36714F02D5F00546B51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA38B37814F02D5F00546B51 /* InfoPlist.strings in Resources */,
+				EA38B38414F02D6000546B51 /* CPViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA38B36514F02D5F00546B51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA38B37A14F02D5F00546B51 /* main.m in Sources */,
+				EA38B37E14F02D6000546B51 /* CPAppDelegate.m in Sources */,
+				EA38B38114F02D6000546B51 /* CPViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA38B37614F02D5F00546B51 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA38B37714F02D5F00546B51 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA38B38214F02D6000546B51 /* CPViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA38B38314F02D6000546B51 /* en */,
+			);
+			name = CPViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA38B38514F02D6000546B51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA38B38614F02D6000546B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA38B38814F02D6000546B51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIColorCrossFadeDemo/UIColorCrossFadeDemo-Prefix.pch";
+				INFOPLIST_FILE = "UIColorCrossFadeDemo/UIColorCrossFadeDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA38B38914F02D6000546B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIColorCrossFadeDemo/UIColorCrossFadeDemo-Prefix.pch";
+				INFOPLIST_FILE = "UIColorCrossFadeDemo/UIColorCrossFadeDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA38B36314F02D5F00546B51 /* Build configuration list for PBXProject "UIColorCrossFadeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA38B38514F02D6000546B51 /* Debug */,
+				EA38B38614F02D6000546B51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA38B38714F02D6000546B51 /* Build configuration list for PBXNativeTarget "UIColorCrossFadeDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA38B38814F02D6000546B51 /* Debug */,
+				EA38B38914F02D6000546B51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA38B36014F02D5F00546B51 /* Project object */;
+}
