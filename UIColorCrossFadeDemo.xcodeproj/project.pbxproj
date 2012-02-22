@@ -16,6 +16,14 @@
 		EA38B38114F02D6000546B51 /* CPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B38014F02D6000546B51 /* CPViewController.m */; };
 		EA38B38414F02D6000546B51 /* CPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA38B38214F02D6000546B51 /* CPViewController.xib */; };
 		EA38B38F14F05A7300546B51 /* UIColor+CrossFade.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B38E14F05A7300546B51 /* UIColor+CrossFade.m */; };
+		EA38B39F14F46C6B00546B51 /* InfColorPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B39E14F46C6B00546B51 /* InfColorPickerController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA38B3AC14F46FA100546B51 /* CPButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B3AB14F46FA100546B51 /* CPButtonView.m */; };
+		EA38B3BB14F4707E00546B51 /* InfColorBarPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B3AE14F4707E00546B51 /* InfColorBarPicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA38B3BC14F4707E00546B51 /* InfColorIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B3B014F4707E00546B51 /* InfColorIndicatorView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA38B3BE14F4707E00546B51 /* InfColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA38B3B414F4707E00546B51 /* InfColorPickerView.xib */; };
+		EA38B3BF14F4707E00546B51 /* InfColorSquarePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B3B614F4707E00546B51 /* InfColorSquarePicker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA38B3C014F4707E00546B51 /* InfHSBSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B3B814F4707E00546B51 /* InfHSBSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA38B3C114F4707E00546B51 /* InfSourceColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B3BA14F4707E00546B51 /* InfSourceColorView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +42,22 @@
 		EA38B38314F02D6000546B51 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/CPViewController.xib; sourceTree = "<group>"; };
 		EA38B38D14F05A7300546B51 /* UIColor+CrossFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CrossFade.h"; sourceTree = "<group>"; };
 		EA38B38E14F05A7300546B51 /* UIColor+CrossFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CrossFade.m"; sourceTree = "<group>"; };
+		EA38B39C14F46C6B00546B51 /* InfColorPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfColorPicker.h; path = InfColorPicker/InfColorPicker/InfColorPicker.h; sourceTree = "<group>"; };
+		EA38B39D14F46C6B00546B51 /* InfColorPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfColorPickerController.h; path = InfColorPicker/InfColorPicker/InfColorPickerController.h; sourceTree = "<group>"; };
+		EA38B39E14F46C6B00546B51 /* InfColorPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfColorPickerController.m; path = InfColorPicker/InfColorPicker/InfColorPickerController.m; sourceTree = "<group>"; };
+		EA38B3AA14F46FA100546B51 /* CPButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPButtonView.h; sourceTree = "<group>"; };
+		EA38B3AB14F46FA100546B51 /* CPButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPButtonView.m; sourceTree = "<group>"; };
+		EA38B3AD14F4707E00546B51 /* InfColorBarPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfColorBarPicker.h; path = InfColorPicker/InfColorPicker/InfColorBarPicker.h; sourceTree = "<group>"; };
+		EA38B3AE14F4707E00546B51 /* InfColorBarPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfColorBarPicker.m; path = InfColorPicker/InfColorPicker/InfColorBarPicker.m; sourceTree = "<group>"; };
+		EA38B3AF14F4707E00546B51 /* InfColorIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfColorIndicatorView.h; path = InfColorPicker/InfColorPicker/InfColorIndicatorView.h; sourceTree = "<group>"; };
+		EA38B3B014F4707E00546B51 /* InfColorIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfColorIndicatorView.m; path = InfColorPicker/InfColorPicker/InfColorIndicatorView.m; sourceTree = "<group>"; };
+		EA38B3B414F4707E00546B51 /* InfColorPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InfColorPickerView.xib; path = InfColorPicker/InfColorPicker/InfColorPickerView.xib; sourceTree = "<group>"; };
+		EA38B3B514F4707E00546B51 /* InfColorSquarePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfColorSquarePicker.h; path = InfColorPicker/InfColorPicker/InfColorSquarePicker.h; sourceTree = "<group>"; };
+		EA38B3B614F4707E00546B51 /* InfColorSquarePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfColorSquarePicker.m; path = InfColorPicker/InfColorPicker/InfColorSquarePicker.m; sourceTree = "<group>"; };
+		EA38B3B714F4707E00546B51 /* InfHSBSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfHSBSupport.h; path = InfColorPicker/InfColorPicker/InfHSBSupport.h; sourceTree = "<group>"; };
+		EA38B3B814F4707E00546B51 /* InfHSBSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfHSBSupport.m; path = InfColorPicker/InfColorPicker/InfHSBSupport.m; sourceTree = "<group>"; };
+		EA38B3B914F4707E00546B51 /* InfSourceColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InfSourceColorView.h; path = InfColorPicker/InfColorPicker/InfSourceColorView.h; sourceTree = "<group>"; };
+		EA38B3BA14F4707E00546B51 /* InfSourceColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InfSourceColorView.m; path = InfColorPicker/InfColorPicker/InfSourceColorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,11 +106,14 @@
 		EA38B37314F02D5F00546B51 /* UIColorCrossFadeDemo */ = {
 			isa = PBXGroup;
 			children = (
+				EA38B3A014F46C6E00546B51 /* Vendor */,
 				EA38B37C14F02D5F00546B51 /* CPAppDelegate.h */,
 				EA38B37D14F02D6000546B51 /* CPAppDelegate.m */,
 				EA38B37F14F02D6000546B51 /* CPViewController.h */,
 				EA38B38014F02D6000546B51 /* CPViewController.m */,
 				EA38B38214F02D6000546B51 /* CPViewController.xib */,
+				EA38B3AA14F46FA100546B51 /* CPButtonView.h */,
+				EA38B3AB14F46FA100546B51 /* CPButtonView.m */,
 				EA38B37414F02D5F00546B51 /* Supporting Files */,
 			);
 			path = UIColorCrossFadeDemo;
@@ -101,6 +128,35 @@
 				EA38B37B14F02D5F00546B51 /* UIColorCrossFadeDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA38B3A014F46C6E00546B51 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				EA38B3A414F46E4300546B51 /* InfColorPicker */,
+			);
+			name = Vendor;
+			sourceTree = "<group>";
+		};
+		EA38B3A414F46E4300546B51 /* InfColorPicker */ = {
+			isa = PBXGroup;
+			children = (
+				EA38B39C14F46C6B00546B51 /* InfColorPicker.h */,
+				EA38B39D14F46C6B00546B51 /* InfColorPickerController.h */,
+				EA38B39E14F46C6B00546B51 /* InfColorPickerController.m */,
+				EA38B3AD14F4707E00546B51 /* InfColorBarPicker.h */,
+				EA38B3AE14F4707E00546B51 /* InfColorBarPicker.m */,
+				EA38B3AF14F4707E00546B51 /* InfColorIndicatorView.h */,
+				EA38B3B014F4707E00546B51 /* InfColorIndicatorView.m */,
+				EA38B3B414F4707E00546B51 /* InfColorPickerView.xib */,
+				EA38B3B514F4707E00546B51 /* InfColorSquarePicker.h */,
+				EA38B3B614F4707E00546B51 /* InfColorSquarePicker.m */,
+				EA38B3B714F4707E00546B51 /* InfHSBSupport.h */,
+				EA38B3B814F4707E00546B51 /* InfHSBSupport.m */,
+				EA38B3B914F4707E00546B51 /* InfSourceColorView.h */,
+				EA38B3BA14F4707E00546B51 /* InfSourceColorView.m */,
+			);
+			name = InfColorPicker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +212,7 @@
 			files = (
 				EA38B37814F02D5F00546B51 /* InfoPlist.strings in Resources */,
 				EA38B38414F02D6000546B51 /* CPViewController.xib in Resources */,
+				EA38B3BE14F4707E00546B51 /* InfColorPickerView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +227,13 @@
 				EA38B37E14F02D6000546B51 /* CPAppDelegate.m in Sources */,
 				EA38B38114F02D6000546B51 /* CPViewController.m in Sources */,
 				EA38B38F14F05A7300546B51 /* UIColor+CrossFade.m in Sources */,
+				EA38B39F14F46C6B00546B51 /* InfColorPickerController.m in Sources */,
+				EA38B3AC14F46FA100546B51 /* CPButtonView.m in Sources */,
+				EA38B3BB14F4707E00546B51 /* InfColorBarPicker.m in Sources */,
+				EA38B3BC14F4707E00546B51 /* InfColorIndicatorView.m in Sources */,
+				EA38B3BF14F4707E00546B51 /* InfColorSquarePicker.m in Sources */,
+				EA38B3C014F4707E00546B51 /* InfHSBSupport.m in Sources */,
+				EA38B3C114F4707E00546B51 /* InfSourceColorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

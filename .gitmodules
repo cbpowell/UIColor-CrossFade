@@ -1,0 +1,3 @@
+[submodule "UIColorCrossFadeDemo/InfColorPicker"]
+	path = UIColorCrossFadeDemo/InfColorPicker
+	url = https://github.com/InfinitApps/InfColorPicker.git

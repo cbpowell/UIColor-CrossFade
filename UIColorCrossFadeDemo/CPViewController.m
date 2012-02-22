@@ -30,14 +30,21 @@
 
 #import "UIColor+CrossFade.h"
 
+#import "InfColorPicker.h"
+#import "CPButtonView.h"
+#import <QuartzCore/QuartzCore.h>
+
 @interface CPViewController ()
+
+@property (nonatomic, weak) CPButtonView *changedColor;
 
 @end
 
 @implementation CPViewController
 
 @synthesize slider, label;
-@synthesize colorA, colorB;
+@synthesize colorA, colorB, buttonA, buttonB;
+@synthesize changedColor;
 
 - (void)viewDidLoad
 {
@@ -66,6 +73,41 @@
     
     UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:self.colorA secondColor:self.colorB atRatio:self.slider.value];
     self.view.backgroundColor = crossFade;
+}
+
+- (void)colorViewTapped:(id)sender {
+
+    InfColorPickerController* picker = [InfColorPickerController colorPickerViewController];
+    
+    CPButtonView *colorButton = sender;
+    self.changedColor = colorButton;
+    picker.sourceColor = colorButton.backgroundColor;
+    picker.delegate = self;
+    [picker presentModallyOverViewController:self];
+	
+}
+
+- (void)colorPickerControllerDidFinish:(InfColorPickerController*)picker {
+    if (self.changedColor == self.buttonA) {
+        self.colorA = picker.resultColor;
+        self.buttonA.backgroundColor = colorA;
+    } else if (self.changedColor == self.buttonB) {
+        self.colorB = picker.resultColor;
+        self.buttonB.backgroundColor = colorB;
+    } else {
+        NSLog(@"Wat");
+    }
+    
+    UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:self.colorA secondColor:self.colorB atRatio:self.slider.value];
+    [UIView animateWithDuration:1.0
+                          delay:1.0 
+                        options:UIViewAnimationOptionCurveLinear
+                     animations:^{self.view.backgroundColor = crossFade;}
+                     completion:^(BOOL finished) {
+                         //Done
+                         
+                     }];
+    [self dismissModalViewControllerAnimated: YES];
 }
 
 @end

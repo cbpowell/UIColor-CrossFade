@@ -27,15 +27,21 @@
 //  UIColorCrossFadeDemo
 
 #import <UIKit/UIKit.h>
+#import "InfColorPicker.h"
 
-@interface CPViewController : UIViewController
+@class CPButtonView;
+
+@interface CPViewController : UIViewController <InfColorPickerControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UISlider *slider;
 @property (nonatomic, strong) IBOutlet UILabel *label;
+@property (nonatomic, strong) IBOutlet CPButtonView *buttonA;
+@property (nonatomic, strong) IBOutlet CPButtonView *buttonB;
 
 @property (nonatomic, strong) UIColor *colorA;
 @property (nonatomic, strong) UIColor *colorB;
 
 - (IBAction)sliderValueChanged:(id)sender;
+- (void)colorViewTapped:(id)sender;
 
 @end
