@@ -95,19 +95,20 @@
         self.colorB = picker.resultColor;
         self.buttonB.backgroundColor = colorB;
     } else {
-        NSLog(@"Wat");
+        NSLog(@"wat");
     }
     
     UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:self.colorA secondColor:self.colorB atRatio:self.slider.value];
     [UIView animateWithDuration:1.0
-                          delay:1.0 
+                          delay:0.4
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{self.view.backgroundColor = crossFade;}
                      completion:^(BOOL finished) {
                          //Done
                          
                      }];
-    [self dismissModalViewControllerAnimated: YES];
+    
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end
