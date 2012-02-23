@@ -27,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA0BA81314F5BE69001625F1 /* README.mdown */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.mdown; sourceTree = "<group>"; };
 		EA38B36914F02D5F00546B51 /* UIColorCrossFadeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIColorCrossFadeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA38B36D14F02D5F00546B51 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EA38B36F14F02D5F00546B51 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -77,6 +78,7 @@
 		EA38B35E14F02D5F00546B51 = {
 			isa = PBXGroup;
 			children = (
+				EA0BA81314F5BE69001625F1 /* README.mdown */,
 				EA38B38D14F05A7300546B51 /* UIColor+CrossFade.h */,
 				EA38B38E14F05A7300546B51 /* UIColor+CrossFade.m */,
 				EA38B37314F02D5F00546B51 /* UIColorCrossFadeDemo */,
@@ -345,6 +347,7 @@
 				EA38B38914F02D6000546B51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

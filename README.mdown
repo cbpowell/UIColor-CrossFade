@@ -16,3 +16,5 @@ At a ratio of 0.0f, the result will be fully firstColor
 At a ratio of 1.0f, the result will be fully secondColor
 
 See the included UIColorCrossFadeDemo project for further example usage.
+
+If you use this in your app, I'd love to hear about it!
