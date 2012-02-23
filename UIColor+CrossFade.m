@@ -53,4 +53,36 @@
     UIColor *newColor = [UIColor colorWithRed:newRed green:newGreen blue:newBlue alpha:newAlpha];
     return newColor;
 }
+
++ (NSArray *)colorsForFadeBetweenFirstColor:(UIColor *)firstColor
+                                lastColor:(UIColor *)lastColor
+                                    inSteps:(NSUInteger)steps {
+    
+    // Handle degenerate cases
+    if (steps == 0)
+        return nil;
+    if (steps == 1)
+        return [NSArray arrayWithObject:firstColor];
+    if (steps == 2)
+        return [NSArray arrayWithObjects:firstColor, lastColor, nil];
+    
+    // Calculate step size
+    CGFloat stepSize = 1.0f / (steps - 1);
+    
+    // Array to store colors in steps
+    NSMutableArray *colors = [[NSMutableArray alloc] initWithCapacity:steps];
+    [colors addObject:firstColor];
+    
+    // Compute intermediate colors
+    CGFloat ratio = stepSize;
+    for (int i = 2; i < steps; i++)
+    {
+        [colors addObject:[self colorForFadeBetweenFirstColor:firstColor secondColor:lastColor atRatio:ratio]];
+        ratio += stepSize;
+    }
+    
+    [colors addObject:lastColor];
+    return colors;
+}
+
 @end
