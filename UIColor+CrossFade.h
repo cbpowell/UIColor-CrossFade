@@ -44,4 +44,11 @@
                                secondColor:(UIColor *)secondColor 
                                    atRatio:(CGFloat)ratio;
 
+/**
+ * An array of [steps] colors starting with firstColor, continuing with interpolations between firstColor and lastColor, and ending with lastColor.
+ */
++ (NSArray *)colorsForFadeBetweenFirstColor:(UIColor *)firstColor
+                                lastColor:(UIColor *)lastColor
+                                    inSteps:(NSUInteger)steps;
+
 @end
