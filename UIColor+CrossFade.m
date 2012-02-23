@@ -35,23 +35,31 @@
                                secondColor:(UIColor *)secondColor 
                                    atRatio:(CGFloat)ratio {
     
+    // If the UIColor arguments lie in different color spaces, return nil
+    // todo: convert between color spaces (http://arstechnica.com/apple/guides/2009/02/iphone-development-accessing-uicolor-components.ars)
+    if (CGColorGetColorSpace(firstColor.CGColor) != CGColorGetColorSpace(secondColor.CGColor))
+    {
+        NSLog(@"Attempted to interpolate between colors with different colorspaces: %@ and %@", firstColor, secondColor);
+        return nil;
+    }
     
+    // Grab color components
     const CGFloat *firstColorComponents = CGColorGetComponents(firstColor.CGColor);
     const CGFloat *secondColorComponents = CGColorGetComponents(secondColor.CGColor);
-    CGFloat firstColorAlpha = CGColorGetAlpha(firstColor.CGColor);
-    CGFloat secondColorAlpha = CGColorGetAlpha(secondColor.CGColor);
     
-    // Red: components[0]
-    // Green: components[1]
-    // Blue: components[2]
+    // Interpolate between colors
+    CGFloat interpolatedComponents[CGColorGetNumberOfComponents(firstColor.CGColor)] ;
+    for (NSUInteger i = 0; i < CGColorGetNumberOfComponents(firstColor.CGColor); i++)
+    {
+        interpolatedComponents[i] = firstColorComponents[i] * (1 - ratio) + secondColorComponents[i] * ratio;
+    }
     
-    CGFloat newRed = firstColorComponents[0] * (1 - ratio) + secondColorComponents[0] * ratio;
-    CGFloat newGreen = firstColorComponents[1] * (1 - ratio) + secondColorComponents[1] * ratio;
-    CGFloat newBlue = firstColorComponents[2] * (1 - ratio) + secondColorComponents[2] * ratio;
-    CGFloat newAlpha = firstColorAlpha * (1 - ratio) + secondColorAlpha * ratio;
+    // Create interpolated color
+    CGColorRef interpolatedCGColor = CGColorCreate(CGColorGetColorSpace(firstColor.CGColor), interpolatedComponents);
+    UIColor *interpolatedColor = [UIColor colorWithCGColor:interpolatedCGColor];
+    CGColorRelease(interpolatedCGColor);
     
-    UIColor *newColor = [UIColor colorWithRed:newRed green:newGreen blue:newBlue alpha:newAlpha];
-    return newColor;
+    return interpolatedColor;
 }
 
 + (NSArray *)colorsForFadeBetweenFirstColor:(UIColor *)firstColor
