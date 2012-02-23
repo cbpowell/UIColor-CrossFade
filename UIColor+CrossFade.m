@@ -35,23 +35,30 @@
                                secondColor:(UIColor *)secondColor 
                                    atRatio:(CGFloat)ratio {
     
+    // Convert to common RGBA colorspace if needed
+    if (CGColorGetColorSpace(firstColor.CGColor) != CGColorGetColorSpace(secondColor.CGColor))
+    {
+        firstColor = [UIColor colorConvertedToRGBA:firstColor];
+        secondColor = [UIColor colorConvertedToRGBA:secondColor];
+    }
     
+    // Grab color components
     const CGFloat *firstColorComponents = CGColorGetComponents(firstColor.CGColor);
     const CGFloat *secondColorComponents = CGColorGetComponents(secondColor.CGColor);
-    CGFloat firstColorAlpha = CGColorGetAlpha(firstColor.CGColor);
-    CGFloat secondColorAlpha = CGColorGetAlpha(secondColor.CGColor);
     
-    // Red: components[0]
-    // Green: components[1]
-    // Blue: components[2]
+    // Interpolate between colors
+    CGFloat interpolatedComponents[CGColorGetNumberOfComponents(firstColor.CGColor)] ;
+    for (NSUInteger i = 0; i < CGColorGetNumberOfComponents(firstColor.CGColor); i++)
+    {
+        interpolatedComponents[i] = firstColorComponents[i] * (1 - ratio) + secondColorComponents[i] * ratio;
+    }
     
-    CGFloat newRed = firstColorComponents[0] * (1 - ratio) + secondColorComponents[0] * ratio;
-    CGFloat newGreen = firstColorComponents[1] * (1 - ratio) + secondColorComponents[1] * ratio;
-    CGFloat newBlue = firstColorComponents[2] * (1 - ratio) + secondColorComponents[2] * ratio;
-    CGFloat newAlpha = firstColorAlpha * (1 - ratio) + secondColorAlpha * ratio;
+    // Create interpolated color
+    CGColorRef interpolatedCGColor = CGColorCreate(CGColorGetColorSpace(firstColor.CGColor), interpolatedComponents);
+    UIColor *interpolatedColor = [UIColor colorWithCGColor:interpolatedCGColor];
+    CGColorRelease(interpolatedCGColor);
     
-    UIColor *newColor = [UIColor colorWithRed:newRed green:newGreen blue:newBlue alpha:newAlpha];
-    return newColor;
+    return interpolatedColor;
 }
 
 + (NSArray *)colorsForFadeBetweenFirstColor:(UIColor *)firstColor
@@ -83,6 +90,34 @@
     
     [colors addObject:lastColor];
     return colors;
+}
+                          
++ (UIColor *)colorConvertedToRGBA:(UIColor *)colorToConvert;
+{
+    CGFloat red;
+    CGFloat green;
+    CGFloat blue;
+    CGFloat alpha;
+    
+    // Convert color to RGBA with a CGContext. UIColor's getRed:green:blue:alpha: doesn't work across color spaces. Adapted from http://stackoverflow.com/a/4700259
+
+    alpha = CGColorGetAlpha(colorToConvert.CGColor);
+    
+    CGColorRef opaqueColor = CGColorCreateCopyWithAlpha(colorToConvert.CGColor, 1.0f);
+    CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    unsigned char resultingPixel[CGColorSpaceGetNumberOfComponents(rgbColorSpace)];
+    CGContextRef context = CGBitmapContextCreate(&resultingPixel, 1, 1, 8, 4, rgbColorSpace, kCGImageAlphaNoneSkipLast);
+    CGContextSetFillColorWithColor(context, opaqueColor);
+    CGColorRelease(opaqueColor);
+    CGContextFillRect(context, CGRectMake(0.f, 0.f, 1.f, 1.f));
+    CGContextRelease(context);
+    CGColorSpaceRelease(rgbColorSpace);
+    
+    red = resultingPixel[0] / 255.0f;
+    green = resultingPixel[1] / 255.0f;
+    blue = resultingPixel[2] / 255.0f;
+
+    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
 @end
