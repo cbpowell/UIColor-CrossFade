@@ -3,6 +3,9 @@ UIColor+CrossFade
 
 UIColor+CrossFade is a UIColor category adding a class method to return a UIColor created by cross fading between the two specified UIColor objects at the specified ratio (between 0.0 and 1.0).
 
+For now, to grab InfColorPicker (which is needed for the demo), use the following when cloning UIColor+CrossFade for the first time:
+    git clone git://github.com/cbpowell/UIColor-CrossFade.git --recursive
+
 ### Using UIColor+CrossFade:
 
 Import UIColor+CrossFade.h, and use as follows:
@@ -15,6 +18,6 @@ Import UIColor+CrossFade.h, and use as follows:
 At a ratio of 0.0f, the result will be fully firstColor
 At a ratio of 1.0f, the result will be fully secondColor
 
-See the included UIColorCrossFadeDemo project for further example usage.
+See the included UIColorCrossFadeDemo project, which uses the extremely handy InfColorPicker, for further example usage.
 
 If you use this in your app, I'd love to hear about it!
