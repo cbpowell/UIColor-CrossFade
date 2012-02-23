@@ -51,4 +51,9 @@
                                 lastColor:(UIColor *)lastColor
                                     inSteps:(NSUInteger)steps;
 
+/**
+ * Convert UIColor to RGBA colorspace. Used for cross-colorspace interpolation.
+ */
++ (UIColor *)colorConvertedToRGBA:(UIColor *)colorToConvert;
+
 @end
