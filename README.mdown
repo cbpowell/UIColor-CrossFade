@@ -15,6 +15,14 @@ Import UIColor+CrossFade.h, and use as follows:
 At a ratio of 0.0f, the result will be fully firstColor
 At a ratio of 1.0f, the result will be fully secondColor
 
+There is also a convenience method that returns an array of crossfaded increments between the specified firstColor and secondColor (thanks peyton!):
+
+    UIColor *colorA = [UIColor redColor];
+    UIColor *colorB = [UIColor blueColor];
+    NSUInteger steps = 5;
+    NSArray *steppedColors = [UIColor colorsForFadeBetweenFirstColor:firstColor lastColor:lastColor inSteps:steps];
+    // steppedColors is an NSArray of 5 UIColor objects, crossfaded in steps between firstColor and secondColor
+
 See the included UIColorCrossFadeDemo project, which uses the extremely handy InfColorPicker, for further example usage.
 
 If you use this in your app, I'd love to hear about it!
