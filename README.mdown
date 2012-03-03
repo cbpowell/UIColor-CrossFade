@@ -12,8 +12,10 @@ Import UIColor+CrossFade.h, and use as follows:
     UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:colorA secondColor:colorB atRatio:0.5f];
     // crossFade is purple
 
-At a ratio of 0.0f, the result will be fully firstColor
-At a ratio of 1.0f, the result will be fully secondColor
+At a ratio of 0.0f, the result will be fully firstColor.
+At a ratio of 1.0f, the result will be fully secondColor.
+
+Remember - you control the ratio and it doesn't have to be linear! `ratio = powf((1 - value/valueNominal), 0.333f)` is valid as well.
 
 There is also a convenience method that returns an array of crossfaded increments between the specified firstColor and secondColor (thanks peyton!):
 
