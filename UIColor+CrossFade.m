@@ -35,6 +35,9 @@
                                secondColor:(UIColor *)secondColor 
                                    atRatio:(CGFloat)ratio {
     
+    // Eliminate values outside of 0 <--> 1
+    ratio = MIN(MAX(0, ratio), 1);
+    
     // Convert to common RGBA colorspace if needed
     if (CGColorGetColorSpace(firstColor.CGColor) != CGColorGetColorSpace(secondColor.CGColor))
     {
