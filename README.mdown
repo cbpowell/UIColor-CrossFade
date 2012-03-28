@@ -7,10 +7,12 @@ UIColor+CrossFade is a UIColor category adding a class method to return a UIColo
 
 Import UIColor+CrossFade.h, and use as follows:
 
-    UIColor *colorA = [UIColor redColor];
-    UIColor *colorB = [UIColor blueColor];
-    UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:colorA secondColor:colorB atRatio:0.5f];
-    // crossFade is purple
+```objective-c
+UIColor *colorA = [UIColor redColor];
+UIColor *colorB = [UIColor blueColor];
+UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:colorA secondColor:colorB atRatio:0.5f];
+// crossFade is purple
+```
 
 At a ratio of 0.0f, the result will be fully firstColor.
 At a ratio of 1.0f, the result will be fully secondColor.
@@ -19,11 +21,24 @@ Remember - you control the ratio and it doesn't have to be linear! `ratio = powf
 
 There is also a convenience method that returns an array of crossfaded increments between the specified firstColor and secondColor (thanks peyton!):
 
-    UIColor *colorA = [UIColor redColor];
-    UIColor *colorB = [UIColor blueColor];
-    NSUInteger steps = 5;
-    NSArray *steppedColors = [UIColor colorsForFadeBetweenFirstColor:firstColor lastColor:lastColor inSteps:steps];
-    // steppedColors is an NSArray of 5 UIColor objects, crossfaded in steps between firstColor and secondColor
+```objective-c
+UIColor *colorA = [UIColor redColor];
+UIColor *colorB = [UIColor blueColor];
+NSUInteger steps = 5;
+NSArray *steppedColors = [UIColor colorsForFadeBetweenFirstColor:firstColor lastColor:lastColor inSteps:steps];
+// steppedColors is an NSArray of 5 UIColor objects, crossfaded in steps between firstColor and secondColor
+```
+
+You can also use a version of the convenience function that allows you to define the curve the method uses when calculating your color steps as a block. For example:
+
+```objective-c
+NSArray *steppedColors = [UIColor colorsForFadeBetweenFirstColor:firstColor 
+                                                       lastColor:lastColor
+                                               withRatioEquation:^(float input) {
+                                                     return powf(input, 1/4.0f);
+                                               }
+                                                          inSteps:steps];
+```
 
 See the included UIColorCrossFadeDemo project, which uses the extremely handy InfColorPicker, for further example usage.
 
