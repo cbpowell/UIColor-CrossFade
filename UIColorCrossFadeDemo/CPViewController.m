@@ -44,6 +44,7 @@
 
 @synthesize slider, label;
 @synthesize colorA, colorB, buttonA, buttonB;
+@synthesize step1, step2, step3, step4, step5;
 @synthesize changedColor;
 
 - (void)viewDidLoad
@@ -55,6 +56,19 @@
     self.colorB = [UIColor blueColor];
     
     self.view.backgroundColor = [UIColor redColor];
+    
+    NSArray *stepColors = [UIColor colorsForFadeBetweenFirstColor:[UIColor redColor] 
+                                                        lastColor:[UIColor blueColor] 
+                                                withRatioEquation:^(float input) {
+                                                    return input;
+                                                }
+                                                          inSteps:5];
+    
+    self.step1.backgroundColor = [stepColors objectAtIndex:0];
+    self.step2.backgroundColor = [stepColors objectAtIndex:1];
+    self.step3.backgroundColor = [stepColors objectAtIndex:2];
+    self.step4.backgroundColor = [stepColors objectAtIndex:3];
+    self.step5.backgroundColor = [stepColors objectAtIndex:4];
 }
 
 - (void)viewDidUnload
@@ -99,10 +113,25 @@
     }
     
     UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:self.colorA secondColor:self.colorB atRatio:self.slider.value];
+    
+    NSArray *stepColors = [UIColor colorsForFadeBetweenFirstColor:self.colorA
+                                                        lastColor:self.colorB
+                                                withRatioEquation:^(float input) {
+                                                    return input;
+                                                }
+                                                          inSteps:5];
+    
     [UIView animateWithDuration:1.0
                           delay:0.4
                         options:UIViewAnimationOptionCurveLinear
-                     animations:^{self.view.backgroundColor = crossFade;}
+                     animations:^{
+                         self.view.backgroundColor = crossFade;
+                         self.step1.backgroundColor = [stepColors objectAtIndex:0];
+                         self.step2.backgroundColor = [stepColors objectAtIndex:1];
+                         self.step3.backgroundColor = [stepColors objectAtIndex:2];
+                         self.step4.backgroundColor = [stepColors objectAtIndex:3];
+                         self.step5.backgroundColor = [stepColors objectAtIndex:4];
+                     }
                      completion:^(BOOL finished) {
                          //Done
                          

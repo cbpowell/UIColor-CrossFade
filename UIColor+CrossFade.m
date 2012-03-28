@@ -68,6 +68,10 @@
                                 lastColor:(UIColor *)lastColor
                                     inSteps:(NSUInteger)steps {
     
+    return [self colorsForFadeBetweenFirstColor:firstColor lastColor:lastColor withRatioEquation:nil inSteps:steps];
+}
+
++ (NSArray *)colorsForFadeBetweenFirstColor:(UIColor *)firstColor lastColor:(UIColor *)lastColor withRatioEquation:(float (^)(float))equation inSteps:(NSUInteger)steps {
     // Handle degenerate cases
     if (steps == 0)
         return nil;
@@ -75,6 +79,13 @@
         return [NSArray arrayWithObject:firstColor];
     if (steps == 2)
         return [NSArray arrayWithObjects:firstColor, lastColor, nil];
+    
+    // Assume linear if no equation is passed
+    if (equation == nil) {
+    	equation = ^(float input) {
+    	    return input;
+    	};
+    }
     
     // Calculate step size
     CGFloat stepSize = 1.0f / (steps - 1);
@@ -87,14 +98,14 @@
     CGFloat ratio = stepSize;
     for (int i = 2; i < steps; i++)
     {
-        [colors addObject:[self colorForFadeBetweenFirstColor:firstColor secondColor:lastColor atRatio:ratio]];
+        [colors addObject:[self colorForFadeBetweenFirstColor:firstColor secondColor:lastColor atRatio:equation(ratio)]];
         ratio += stepSize;
     }
     
     [colors addObject:lastColor];
     return colors;
 }
-                          
+                       
 + (UIColor *)colorConvertedToRGBA:(UIColor *)colorToConvert;
 {
     CGFloat red;

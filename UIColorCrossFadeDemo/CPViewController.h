@@ -37,6 +37,11 @@
 @property (nonatomic, strong) IBOutlet UILabel *label;
 @property (nonatomic, strong) IBOutlet CPButtonView *buttonA;
 @property (nonatomic, strong) IBOutlet CPButtonView *buttonB;
+@property (nonatomic, strong) IBOutlet UIView *step1;
+@property (nonatomic, strong) IBOutlet UIView *step2;
+@property (nonatomic, strong) IBOutlet UIView *step3;
+@property (nonatomic, strong) IBOutlet UIView *step4;
+@property (nonatomic, strong) IBOutlet UIView *step5;
 
 @property (nonatomic, strong) UIColor *colorA;
 @property (nonatomic, strong) UIColor *colorB;
