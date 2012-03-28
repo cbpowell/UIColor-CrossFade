@@ -44,7 +44,8 @@
 
 @synthesize slider, label;
 @synthesize colorA, colorB, buttonA, buttonB;
-@synthesize step1, step2, step3, step4, step5;
+@synthesize linearStep1, linearStep2, linearStep3, linearStep4, linearStep5;
+@synthesize powfStep1, powfStep2, powfStep3, powfStep4, powfStep5;
 @synthesize changedColor;
 
 - (void)viewDidLoad
@@ -57,18 +58,31 @@
     
     self.view.backgroundColor = [UIColor redColor];
     
-    NSArray *stepColors = [UIColor colorsForFadeBetweenFirstColor:[UIColor redColor] 
+    NSArray *stepColorsLinear = [UIColor colorsForFadeBetweenFirstColor:[UIColor redColor] 
                                                         lastColor:[UIColor blueColor] 
                                                 withRatioEquation:^(float input) {
                                                     return input;
                                                 }
                                                           inSteps:5];
     
-    self.step1.backgroundColor = [stepColors objectAtIndex:0];
-    self.step2.backgroundColor = [stepColors objectAtIndex:1];
-    self.step3.backgroundColor = [stepColors objectAtIndex:2];
-    self.step4.backgroundColor = [stepColors objectAtIndex:3];
-    self.step5.backgroundColor = [stepColors objectAtIndex:4];
+    self.linearStep1.backgroundColor = [stepColorsLinear objectAtIndex:0];
+    self.linearStep2.backgroundColor = [stepColorsLinear objectAtIndex:1];
+    self.linearStep3.backgroundColor = [stepColorsLinear objectAtIndex:2];
+    self.linearStep4.backgroundColor = [stepColorsLinear objectAtIndex:3];
+    self.linearStep5.backgroundColor = [stepColorsLinear objectAtIndex:4];
+    
+    NSArray *stepColorsPowf = [UIColor colorsForFadeBetweenFirstColor:[UIColor redColor] 
+                                                              lastColor:[UIColor blueColor] 
+                                                      withRatioEquation:^(float input) {
+                                                          return powf(input, 1/4.0f);
+                                                      }
+                                                                inSteps:5];
+    
+    self.powfStep1.backgroundColor = [stepColorsPowf objectAtIndex:0];
+    self.powfStep2.backgroundColor = [stepColorsPowf objectAtIndex:1];
+    self.powfStep3.backgroundColor = [stepColorsPowf objectAtIndex:2];
+    self.powfStep4.backgroundColor = [stepColorsPowf objectAtIndex:3];
+    self.powfStep5.backgroundColor = [stepColorsPowf objectAtIndex:4];
 }
 
 - (void)viewDidUnload
@@ -114,23 +128,37 @@
     
     UIColor *crossFade = [UIColor colorForFadeBetweenFirstColor:self.colorA secondColor:self.colorB atRatio:self.slider.value];
     
-    NSArray *stepColors = [UIColor colorsForFadeBetweenFirstColor:self.colorA
+    NSArray *stepColorsLinear = [UIColor colorsForFadeBetweenFirstColor:self.colorA
                                                         lastColor:self.colorB
                                                 withRatioEquation:^(float input) {
                                                     return input;
                                                 }
                                                           inSteps:5];
     
+    NSArray *stepColorsPowf = [UIColor colorsForFadeBetweenFirstColor:self.colorA
+                                                            lastColor:self.colorB
+                                                    withRatioEquation:^(float input) {
+                                                        return powf(input, 1/4.0f);
+                                                    }
+                                                              inSteps:5];
+    
     [UIView animateWithDuration:1.0
                           delay:0.4
                         options:UIViewAnimationOptionCurveLinear
                      animations:^{
                          self.view.backgroundColor = crossFade;
-                         self.step1.backgroundColor = [stepColors objectAtIndex:0];
-                         self.step2.backgroundColor = [stepColors objectAtIndex:1];
-                         self.step3.backgroundColor = [stepColors objectAtIndex:2];
-                         self.step4.backgroundColor = [stepColors objectAtIndex:3];
-                         self.step5.backgroundColor = [stepColors objectAtIndex:4];
+                         // Linear
+                         self.linearStep1.backgroundColor = [stepColorsLinear objectAtIndex:0];
+                         self.linearStep2.backgroundColor = [stepColorsLinear objectAtIndex:1];
+                         self.linearStep3.backgroundColor = [stepColorsLinear objectAtIndex:2];
+                         self.linearStep4.backgroundColor = [stepColorsLinear objectAtIndex:3];
+                         self.linearStep5.backgroundColor = [stepColorsLinear objectAtIndex:4];
+                         // Powf
+                         self.powfStep1.backgroundColor = [stepColorsPowf objectAtIndex:0];
+                         self.powfStep2.backgroundColor = [stepColorsPowf objectAtIndex:1];
+                         self.powfStep3.backgroundColor = [stepColorsPowf objectAtIndex:2];
+                         self.powfStep4.backgroundColor = [stepColorsPowf objectAtIndex:3];
+                         self.powfStep5.backgroundColor = [stepColorsPowf objectAtIndex:4];
                      }
                      completion:^(BOOL finished) {
                          //Done

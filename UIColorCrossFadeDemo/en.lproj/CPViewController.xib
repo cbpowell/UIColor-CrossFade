@@ -39,7 +39,7 @@
 					<object class="IBUISlider" id="1070974518">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{18, 315}, {284, 23}}</string>
+						<string key="NSFrame">{{18, 325}, {284, 23}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="249015919"/>
@@ -52,7 +52,7 @@
 					<object class="IBUILabel" id="249015919">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{125, 345}, {70, 21}}</string>
+						<string key="NSFrame">{{125, 355}, {70, 21}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -129,7 +129,7 @@
 								<string key="NSFrame">{{31, 50}, {58, 21}}</string>
 								<reference key="NSSuperview" ref="1070837047"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="522950104"/>
+								<reference key="NSNextKeyView" ref="907406829"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -157,72 +157,147 @@
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="522950104">
+					<object class="IBUIView" id="907406829">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 226}, {40, 40}}</string>
+						<string key="NSFrame">{{20, 210}, {40, 40}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="428650835"/>
+						<reference key="NSNextKeyView" ref="158710331"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<object class="NSColorSpace" key="NSCustomColorSpace" id="399817133">
+							<object class="NSColorSpace" key="NSCustomColorSpace" id="979438773">
 								<int key="NSID">2</int>
 							</object>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="428650835">
+					<object class="IBUIView" id="158710331">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{80, 226}, {40, 40}}</string>
+						<string key="NSFrame">{{80, 210}, {40, 40}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="241724152"/>
+						<reference key="NSNextKeyView" ref="527255059"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<reference key="NSCustomColorSpace" ref="399817133"/>
+							<reference key="NSCustomColorSpace" ref="979438773"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="241724152">
+					<object class="IBUIView" id="527255059">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{140, 226}, {40, 40}}</string>
+						<string key="NSFrame">{{140, 210}, {40, 40}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="764822120"/>
+						<reference key="NSNextKeyView" ref="887623074"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<reference key="NSCustomColorSpace" ref="399817133"/>
+							<reference key="NSCustomColorSpace" ref="979438773"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="764822120">
+					<object class="IBUIView" id="887623074">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{200, 226}, {40, 40}}</string>
+						<string key="NSFrame">{{200, 210}, {40, 40}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="1015632514"/>
+						<reference key="NSNextKeyView" ref="670268066"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<reference key="NSCustomColorSpace" ref="399817133"/>
+							<reference key="NSCustomColorSpace" ref="979438773"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
-					<object class="IBUIView" id="1015632514">
+					<object class="IBUIView" id="670268066">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{260, 226}, {40, 40}}</string>
+						<string key="NSFrame">{{260, 210}, {40, 40}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="209911686"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+							<reference key="NSCustomColorSpace" ref="979438773"/>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
+					<object class="IBUIView" id="209911686">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{20, 270}, {40, 40}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="37945634"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+							<reference key="NSCustomColorSpace" ref="979438773"/>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
+					<object class="IBUIView" id="37945634">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{80, 270}, {40, 40}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="342912734"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+							<reference key="NSCustomColorSpace" ref="979438773"/>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
+					<object class="IBUIView" id="342912734">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{140, 270}, {40, 40}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="789903323"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+							<reference key="NSCustomColorSpace" ref="979438773"/>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
+					<object class="IBUIView" id="789903323">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{200, 270}, {40, 40}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="115992246"/>
+						<string key="NSReuseIdentifierKey">_NS:9</string>
+						<object class="NSColor" key="IBUIBackgroundColor">
+							<int key="NSColorSpace">3</int>
+							<bytes key="NSWhite">MQA</bytes>
+							<reference key="NSCustomColorSpace" ref="979438773"/>
+						</object>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+					</object>
+					<object class="IBUIView" id="115992246">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{260, 270}, {40, 40}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1070974518"/>
@@ -230,7 +305,7 @@
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
 							<bytes key="NSWhite">MQA</bytes>
-							<reference key="NSCustomColorSpace" ref="399817133"/>
+							<reference key="NSCustomColorSpace" ref="979438773"/>
 						</object>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					</object>
@@ -292,43 +367,83 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">step1</string>
+						<string key="label">linearStep1</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="522950104"/>
+						<reference key="destination" ref="907406829"/>
 					</object>
-					<int key="connectionID">33</int>
+					<int key="connectionID">43</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">step2</string>
+						<string key="label">linearStep2</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="428650835"/>
+						<reference key="destination" ref="158710331"/>
 					</object>
-					<int key="connectionID">34</int>
+					<int key="connectionID">44</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">step3</string>
+						<string key="label">linearStep3</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="241724152"/>
+						<reference key="destination" ref="527255059"/>
 					</object>
-					<int key="connectionID">35</int>
+					<int key="connectionID">45</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">step4</string>
+						<string key="label">linearStep4</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="764822120"/>
+						<reference key="destination" ref="887623074"/>
 					</object>
-					<int key="connectionID">36</int>
+					<int key="connectionID">46</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">step5</string>
+						<string key="label">linearStep5</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="1015632514"/>
+						<reference key="destination" ref="670268066"/>
 					</object>
-					<int key="connectionID">37</int>
+					<int key="connectionID">47</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">powfStep1</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="209911686"/>
+					</object>
+					<int key="connectionID">48</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">powfStep2</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="37945634"/>
+					</object>
+					<int key="connectionID">49</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">powfStep3</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="342912734"/>
+					</object>
+					<int key="connectionID">50</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">powfStep4</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="789903323"/>
+					</object>
+					<int key="connectionID">51</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">powfStep5</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="115992246"/>
+					</object>
+					<int key="connectionID">52</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -379,15 +494,20 @@
 						<int key="objectID">6</int>
 						<reference key="object" ref="774585933"/>
 						<array class="NSMutableArray" key="children">
-							<reference ref="1070974518"/>
 							<reference ref="262281587"/>
 							<reference ref="1070837047"/>
+							<reference ref="907406829"/>
+							<reference ref="158710331"/>
+							<reference ref="527255059"/>
+							<reference ref="887623074"/>
+							<reference ref="670268066"/>
+							<reference ref="1070974518"/>
+							<reference ref="209911686"/>
+							<reference ref="37945634"/>
+							<reference ref="342912734"/>
+							<reference ref="789903323"/>
+							<reference ref="115992246"/>
 							<reference ref="249015919"/>
-							<reference ref="522950104"/>
-							<reference ref="428650835"/>
-							<reference ref="764822120"/>
-							<reference ref="241724152"/>
-							<reference ref="1015632514"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -431,33 +551,63 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">24</int>
-						<reference key="object" ref="522950104"/>
+						<reference key="object" ref="907406829"/>
 						<reference key="parent" ref="774585933"/>
-						<string key="objectName">Step 1</string>
+						<string key="objectName">Step 1 - Linear</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">29</int>
-						<reference key="object" ref="428650835"/>
+						<reference key="object" ref="158710331"/>
 						<reference key="parent" ref="774585933"/>
-						<string key="objectName">Step 2</string>
+						<string key="objectName">Step 2 - Linear</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">30</int>
-						<reference key="object" ref="241724152"/>
+						<reference key="object" ref="527255059"/>
 						<reference key="parent" ref="774585933"/>
-						<string key="objectName">Step 3</string>
+						<string key="objectName">Step 3 - Linear</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">31</int>
-						<reference key="object" ref="764822120"/>
+						<reference key="object" ref="887623074"/>
 						<reference key="parent" ref="774585933"/>
-						<string key="objectName">Step 4</string>
+						<string key="objectName">Step 4 - Linear</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">32</int>
-						<reference key="object" ref="1015632514"/>
+						<reference key="object" ref="670268066"/>
 						<reference key="parent" ref="774585933"/>
-						<string key="objectName">Step 5</string>
+						<string key="objectName">Step 5 - Linear</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">38</int>
+						<reference key="object" ref="209911686"/>
+						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Step 1 - powf</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">39</int>
+						<reference key="object" ref="37945634"/>
+						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Step 2 - powf</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">40</int>
+						<reference key="object" ref="342912734"/>
+						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Step 3 - powf</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">41</int>
+						<reference key="object" ref="789903323"/>
+						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Step 4 - powf</string>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">42</int>
+						<reference key="object" ref="115992246"/>
+						<reference key="parent" ref="774585933"/>
+						<string key="objectName">Step 5 - powf</string>
 					</object>
 				</array>
 			</object>
@@ -477,6 +627,11 @@
 				<string key="30.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="31.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="32.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="38.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="39.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="40.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="41.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<string key="42.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="6.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="8.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<dictionary class="NSMutableDictionary" key="9.IBAttributePlaceholdersKey"/>
@@ -486,7 +641,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">37</int>
+			<int key="maxID">52</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -527,12 +682,17 @@
 						<string key="buttonA">CPButtonView</string>
 						<string key="buttonB">CPButtonView</string>
 						<string key="label">UILabel</string>
+						<string key="linearStep1">UIView</string>
+						<string key="linearStep2">UIView</string>
+						<string key="linearStep3">UIView</string>
+						<string key="linearStep4">UIView</string>
+						<string key="linearStep5">UIView</string>
+						<string key="powfStep1">UIView</string>
+						<string key="powfStep2">UIView</string>
+						<string key="powfStep3">UIView</string>
+						<string key="powfStep4">UIView</string>
+						<string key="powfStep5">UIView</string>
 						<string key="slider">UISlider</string>
-						<string key="step1">UIView</string>
-						<string key="step2">UIView</string>
-						<string key="step3">UIView</string>
-						<string key="step4">UIView</string>
-						<string key="step5">UIView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="buttonA">
@@ -547,29 +707,49 @@
 							<string key="name">label</string>
 							<string key="candidateClassName">UILabel</string>
 						</object>
+						<object class="IBToOneOutletInfo" key="linearStep1">
+							<string key="name">linearStep1</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="linearStep2">
+							<string key="name">linearStep2</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="linearStep3">
+							<string key="name">linearStep3</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="linearStep4">
+							<string key="name">linearStep4</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="linearStep5">
+							<string key="name">linearStep5</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="powfStep1">
+							<string key="name">powfStep1</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="powfStep2">
+							<string key="name">powfStep2</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="powfStep3">
+							<string key="name">powfStep3</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="powfStep4">
+							<string key="name">powfStep4</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="powfStep5">
+							<string key="name">powfStep5</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="slider">
 							<string key="name">slider</string>
 							<string key="candidateClassName">UISlider</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="step1">
-							<string key="name">step1</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="step2">
-							<string key="name">step2</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="step3">
-							<string key="name">step3</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="step4">
-							<string key="name">step4</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="step5">
-							<string key="name">step5</string>
-							<string key="candidateClassName">UIView</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
