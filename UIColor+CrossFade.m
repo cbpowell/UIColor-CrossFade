@@ -34,15 +34,21 @@
 + (UIColor *)colorForFadeBetweenFirstColor:(UIColor *)firstColor 
                                secondColor:(UIColor *)secondColor 
                                    atRatio:(CGFloat)ratio {
+    return [self colorForFadeBetweenFirstColor:firstColor secondColor:secondColor atRatio:ratio compareColorSpaces:YES];
     
+}
+
++ (UIColor *)colorForFadeBetweenFirstColor:(UIColor *)firstColor secondColor:(UIColor *)secondColor atRatio:(CGFloat)ratio compareColorSpaces:(BOOL)compare {
     // Eliminate values outside of 0 <--> 1
     ratio = MIN(MAX(0, ratio), 1);
     
     // Convert to common RGBA colorspace if needed
-    if (CGColorGetColorSpace(firstColor.CGColor) != CGColorGetColorSpace(secondColor.CGColor))
-    {
-        firstColor = [UIColor colorConvertedToRGBA:firstColor];
-        secondColor = [UIColor colorConvertedToRGBA:secondColor];
+    if (compare) {
+        if (CGColorGetColorSpace(firstColor.CGColor) != CGColorGetColorSpace(secondColor.CGColor))
+        {
+            firstColor = [UIColor colorConvertedToRGBA:firstColor];
+            secondColor = [UIColor colorConvertedToRGBA:secondColor];
+        }
     }
     
     // Grab color components

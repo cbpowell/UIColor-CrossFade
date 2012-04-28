@@ -45,6 +45,13 @@
                                    atRatio:(CGFloat)ratio;
 
 /**
+ * Same as above, but allows turning off the color space comparison
+ * for a performance boost.
+ */
+
++ (UIColor *)colorForFadeBetweenFirstColor:(UIColor *)firstColor secondColor:(UIColor *)secondColor atRatio:(CGFloat)ratio compareColorSpaces:(BOOL)compare;
+
+/**
  * An array of [steps] colors starting with firstColor, continuing with linear interpolations 
  * between firstColor and lastColor and ending with lastColor.
  */
