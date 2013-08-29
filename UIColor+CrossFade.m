@@ -111,6 +111,39 @@
     [colors addObject:lastColor];
     return colors;
 }
+
++ (CAKeyframeAnimation *)keyframeAnimationForKeyPath:(NSString *)keyPath
+                                            duration:(NSTimeInterval)duration
+                                   betweenFirstColor:(UIColor *)firstColor
+                                           lastColor:(UIColor *)lastColor
+{
+    return [UIColor keyframeAnimationForKeyPath:keyPath
+                                       duration:duration
+                              betweenFirstColor:firstColor
+                                      lastColor:lastColor
+                              withRatioEquation:^float(float input) {
+                                  return input;
+                              } inSteps:floorf(duration * 30.0f)];
+}
+
++ (CAKeyframeAnimation *)keyframeAnimationForKeyPath:(NSString *)keyPath
+                                            duration:(NSTimeInterval)duration
+                                   betweenFirstColor:(UIColor *)firstColor
+                                           lastColor:(UIColor *)lastColor
+                                   withRatioEquation:(float (^)(float input))equation
+                                             inSteps:(NSUInteger)steps
+{
+    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:keyPath];
+    animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animation.duration = duration;
+    
+    NSArray *colorRefs = [[self colorsForFadeBetweenFirstColor:firstColor lastColor:lastColor withRatioEquation:equation inSteps:steps] valueForKeyPath:@"CCF_CGColor"];
+    
+    animation.values = colorRefs;
+    return animation;
+}
+
+#pragma mark - Helpers
                        
 + (UIColor *)colorConvertedToRGBA:(UIColor *)colorToConvert;
 {
@@ -138,6 +171,14 @@
     blue = resultingPixel[2] / 255.0f;
 
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+}
+
+- (id)valueForUndefinedKey:(NSString *)key {
+    if ([key isEqualToString:@"CCF_CGColor"]) {
+        return (id)self.CGColor;
+    }
+    
+    return [super valueForUndefinedKey:key];
 }
 
 @end

@@ -76,4 +76,27 @@
  */
 + (UIColor *)colorConvertedToRGBA:(UIColor *)colorToConvert;
 
+
+/**
+ * Creates a CAKeyframeAnimation for the given key path, duration, and first/last colors that can be
+ * applied to an appropriate CALayer property (i.e. backgroundColor). See the demo for example usage.
+ */
++ (CAKeyframeAnimation *)keyframeAnimationForKeyPath:(NSString *)keyPath
+                                            duration:(NSTimeInterval)duration
+                                   betweenFirstColor:(UIColor *)firstColor
+                                           lastColor:(UIColor *)lastColor;
+
+
+/**
+ * Same as above, but allows setting a ratio equation (for non-linear transitions between colors) and
+ * the number of steps to calculate. Decreasing steps may improve performance as it decreases the number
+ * of cross-fade calculations necessary.
+ */
++ (CAKeyframeAnimation *)keyframeAnimationForKeyPath:(NSString *)keyPath
+                                            duration:(NSTimeInterval)duration
+                                   betweenFirstColor:(UIColor *)firstColor
+                                           lastColor:(UIColor *)lastColor
+                                   withRatioEquation:(float (^)(float))equation
+                                             inSteps:(NSUInteger)steps;
+
 @end
