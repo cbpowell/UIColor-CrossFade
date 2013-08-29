@@ -3,7 +3,7 @@
 //  UIColorCrossFadeDemo
 //
 //  Created by Charles Powell on 2/21/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012-2013 Charles Powell. All rights reserved.
 //
 
 #import "CPButtonView.h"
