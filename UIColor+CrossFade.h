@@ -67,7 +67,7 @@
  */
 + (NSArray *)colorsForFadeBetweenFirstColor:(UIColor *)firstColor 
                                   lastColor:(UIColor *)lastColor 
-                          withRatioEquation:(float (^)(float))equation
+                          withRatioEquation:(float (^)(float input))equation
                                     inSteps:(NSUInteger)steps;
     
 

@@ -77,7 +77,7 @@
     return [self colorsForFadeBetweenFirstColor:firstColor lastColor:lastColor withRatioEquation:nil inSteps:steps];
 }
 
-+ (NSArray *)colorsForFadeBetweenFirstColor:(UIColor *)firstColor lastColor:(UIColor *)lastColor withRatioEquation:(float (^)(float))equation inSteps:(NSUInteger)steps {
++ (NSArray *)colorsForFadeBetweenFirstColor:(UIColor *)firstColor lastColor:(UIColor *)lastColor withRatioEquation:(float (^)(float input))equation inSteps:(NSUInteger)steps {
     // Handle degenerate cases
     if (steps == 0)
         return nil;
