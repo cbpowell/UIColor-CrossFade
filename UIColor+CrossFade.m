@@ -29,8 +29,6 @@
 
 #import "UIColor+CrossFade.h"
 
-#import <QuartzCore/QuartzCore.h>
-
 @implementation UIColor (CrossFade)
 
 + (UIColor *)colorForFadeBetweenFirstColor:(UIColor *)firstColor 
