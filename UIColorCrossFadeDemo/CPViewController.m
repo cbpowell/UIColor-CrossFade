@@ -103,6 +103,43 @@
     self.view.backgroundColor = crossFade;
 }
 
+- (IBAction)animateToColor:(id)sender {
+    UISegmentedControl *seg = (UISegmentedControl *)sender;
+    
+    CAKeyframeAnimation *animation = nil;
+    CGColorRef finalColor = nil;
+    CGFloat endSliderVal = 0.0f;
+    
+    switch([seg selectedSegmentIndex]) {
+        case 0:
+            // Animate to A
+            animation = [UIColor keyframeAnimationForKeyPath:@"backgroundColor"
+                                                    duration:1.5
+                                           betweenFirstColor:self.view.backgroundColor
+                                                   lastColor:self.colorA];
+            finalColor = self.colorA.CGColor;
+            endSliderVal = 0.0f;
+            break;
+        case 1:
+            // Animate to B
+            animation = [UIColor keyframeAnimationForKeyPath:@"backgroundColor"
+                                                    duration:1.5
+                                           betweenFirstColor:self.view.backgroundColor
+                                                   lastColor:self.colorB
+                                           withRatioEquation:^float(float input) {
+                                               return powf(input, 1/2.0f);
+                                           }
+                                                     inSteps:45];
+            finalColor = self.colorB.CGColor;
+            endSliderVal = 1.0f;
+            break;
+    }
+    
+    self.view.layer.backgroundColor = finalColor;
+    self.slider.value = endSliderVal;
+    [self.view.layer addAnimation:animation forKey:@"backgroundColorChange"];
+}
+
 - (void)colorViewTapped:(id)sender {
 
     InfColorPickerController* picker = [InfColorPickerController colorPickerViewController];

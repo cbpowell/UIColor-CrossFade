@@ -52,6 +52,7 @@
 @property (nonatomic, strong) UIColor *colorB;
 
 - (IBAction)sliderValueChanged:(id)sender;
+- (IBAction)animateToColor:(id)sender;
 - (void)colorViewTapped:(id)sender;
 
 @end

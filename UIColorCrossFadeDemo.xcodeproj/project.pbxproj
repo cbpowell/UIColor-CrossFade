@@ -24,6 +24,7 @@
 		EA38B38414F02D6000546B51 /* CPViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA38B38214F02D6000546B51 /* CPViewController.xib */; };
 		EA38B38F14F05A7300546B51 /* UIColor+CrossFade.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B38E14F05A7300546B51 /* UIColor+CrossFade.m */; };
 		EA38B3AC14F46FA100546B51 /* CPButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA38B3AB14F46FA100546B51 /* CPButtonView.m */; };
+		EAF8945A17CDBF1B00268DED /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAF8945917CDBF1B00268DED /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		EA38B38E14F05A7300546B51 /* UIColor+CrossFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CrossFade.m"; sourceTree = "<group>"; };
 		EA38B3AA14F46FA100546B51 /* CPButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPButtonView.h; sourceTree = "<group>"; };
 		EA38B3AB14F46FA100546B51 /* CPButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPButtonView.m; sourceTree = "<group>"; };
+		EAF8945917CDBF1B00268DED /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF8945A17CDBF1B00268DED /* QuartzCore.framework in Frameworks */,
 				EA38B36E14F02D5F00546B51 /* UIKit.framework in Frameworks */,
 				EA38B37014F02D5F00546B51 /* Foundation.framework in Frameworks */,
 				EA38B37214F02D5F00546B51 /* CoreGraphics.framework in Frameworks */,
@@ -98,6 +101,7 @@
 		EA38B36C14F02D5F00546B51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EAF8945917CDBF1B00268DED /* QuartzCore.framework */,
 				EA38B36D14F02D5F00546B51 /* UIKit.framework */,
 				EA38B36F14F02D5F00546B51 /* Foundation.framework */,
 				EA38B37114F02D5F00546B51 /* CoreGraphics.framework */,
