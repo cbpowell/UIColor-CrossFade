@@ -159,7 +159,7 @@
     CGColorRef opaqueColor = CGColorCreateCopyWithAlpha(colorToConvert.CGColor, 1.0f);
     CGColorSpaceRef rgbColorSpace = CGColorSpaceCreateDeviceRGB();
     unsigned char resultingPixel[CGColorSpaceGetNumberOfComponents(rgbColorSpace)];
-    CGContextRef context = CGBitmapContextCreate(&resultingPixel, 1, 1, 8, 4, rgbColorSpace, kCGImageAlphaNoneSkipLast);
+    CGContextRef context = CGBitmapContextCreate(&resultingPixel, 1, 1, 8, 4, rgbColorSpace, (CGBitmapInfo)kCGImageAlphaNoneSkipLast);
     CGContextSetFillColorWithColor(context, opaqueColor);
     CGColorRelease(opaqueColor);
     CGContextFillRect(context, CGRectMake(0.f, 0.f, 1.f, 1.f));
